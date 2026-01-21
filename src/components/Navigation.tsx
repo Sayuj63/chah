@@ -98,16 +98,20 @@ export default function Navigation() {
 
                 {/* Mobile Menu */}
                 <div
-                    className={`lg:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-96 mt-6' : 'max-h-0'
+                    className={`lg:hidden fixed inset-0 top-[72px] bg-[#FFF8F0] backdrop-blur-md transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                         }`}
                 >
-                    <div className="flex flex-col gap-4 py-4">
-                        {navLinks.map((link) => (
+                    <div className="flex flex-col gap-2 p-6">
+                        {navLinks.map((link, index) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-sm font-semibold uppercase tracking-[0.1em] text-[#3E2723] hover:text-[#8B5A3C] transition-colors duration-300 py-2"
+                                className="text-lg font-semibold uppercase tracking-[0.1em] text-[#3E2723] hover:text-[#8B5A3C] transition-all duration-300 py-4 px-4 rounded-xl hover:bg-white/50 border-b border-[#8B5A3C]/10"
+                                style={{
+                                    animationDelay: `${index * 50}ms`,
+                                    animation: isMobileMenuOpen ? 'slideInRight 0.3s ease-out forwards' : 'none'
+                                }}
                             >
                                 {link.label}
                             </Link>
@@ -115,7 +119,7 @@ export default function Navigation() {
                         <Link
                             href="#locations"
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="btn-primary mt-2"
+                            className="btn-primary mt-4 text-center text-base py-4"
                         >
                             Visit Us
                         </Link>

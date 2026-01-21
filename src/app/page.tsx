@@ -36,31 +36,31 @@ export default function Home() {
 
       <main className="min-h-screen bg-[#FFF8F0]">
         {/* Hero Section - Split Left/Right */}
-        <section className="relative w-full min-h-[80vh] flex flex-col md:flex-row pt-24">
+        <section className="relative w-full min-h-[100vh] md:min-h-[80vh] flex flex-col md:flex-row pt-20 md:pt-24">
           {/* Left Panel - Brand Message */}
-          <div className="w-full md:w-1/2 bg-[#FFF8F0] flex items-center justify-center p-12 md:p-20 relative">
+          <div className="w-full md:w-1/2 bg-[#FFF8F0] flex items-center justify-center p-6 md:p-12 lg:p-20 relative">
             <div className="w-full">
 
               <AnimatedSection animation="slide-up" delay={200}>
-                <p className="label-text mb-8">
+                <p className="label-text mb-6 md:mb-8">
                   ਚਾਹ ਦੀ ਪਿਆਲਾ ਦੇ
                 </p>
               </AnimatedSection>
 
               <AnimatedSection animation="slide-up" delay={400}>
-                <h1 className="heading-xl mb-12">
+                <h1 className="heading-xl mb-8 md:mb-12">
                   CHAH E<br />PIAA DE
                 </h1>
               </AnimatedSection>
 
               <AnimatedSection animation="slide-up" delay={600}>
-                <p className="body-text mb-12">
+                <p className="body-text mb-8 md:mb-12">
                   Experience authentic Indian chai in a warm, welcoming atmosphere. Every cup tells a story of tradition, love, and the perfect blend of spices.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection animation="slide-up" delay={800}>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                   <Button href="#menu" variant="primary">
                     Explore Menu
                   </Button>
@@ -72,7 +72,7 @@ export default function Home() {
 
               {/* Scroll Indicator */}
               <AnimatedSection animation="fade-in" delay={1000}>
-                <div className="hidden md:flex items-center gap-3 mt-20">
+                <div className="hidden md:flex items-center gap-3 mt-16 lg:mt-20">
                   <div className="w-px h-16 bg-[#8B5A3C]/30" />
                   <p className="text-xs uppercase tracking-[0.2em] text-[#8B5A3C] -rotate-90 origin-left translate-x-4">
                     Scroll
@@ -88,7 +88,7 @@ export default function Home() {
             delay={400}
             className="w-full md:w-1/2 relative h-[50vh] md:h-[70vh]"
           >
-            <div className="image-overlay h-full rounded-2xl overflow-hidden">
+            <div className="image-overlay h-full rounded-2xl overflow-hidden m-6 md:m-0">
               <Image
                 src="/images/hero_image.jpeg"
                 alt="Chah E Piaa De Storefront"
