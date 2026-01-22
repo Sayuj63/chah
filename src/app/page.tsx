@@ -11,7 +11,7 @@ export default function Home() {
       name: 'Classic Masala Chai',
       description: 'Traditional blend of aromatic spices with premium black tea',
       price: '₹60',
-      image: '/images/chai-brewing.png',
+      image: '/images/featureimage.jpeg',
       tags: ['Bestseller', 'Spicy'],
     },
     {
@@ -90,7 +90,7 @@ export default function Home() {
           >
             <div className="image-overlay h-full rounded-2xl overflow-hidden m-6 md:m-0">
               <Image
-                src="/images/hero_image.jpeg"
+                src="/images/heroimage.jpeg"
                 alt="Chah E Piaa De Storefront"
                 fill
                 className="object-cover object-center"
@@ -101,11 +101,11 @@ export default function Home() {
         </section>
 
         {/* Chai Brewing Section - Split Left/Right (Reversed) */}
-        <section className="relative w-full min-h-[80vh] flex flex-col-reverse md:flex-row">
+        <section className="relative w-full flex flex-col-reverse md:flex-row">
           {/* Left Panel - Chai Brewing Image */}
           <AnimatedSection
             animation="slide-in-left"
-            className="w-full md:w-1/2 relative h-[50vh] md:h-[70vh]"
+            className="w-full md:w-1/2 relative h-[50vh] md:h-auto"
           >
             <div className="image-overlay h-full">
               <Image
@@ -177,7 +177,7 @@ export default function Home() {
               <div className="text-center mb-12">
                 <p className="label-text mb-6">Our Space</p>
                 <h2 className="heading-lg mb-6">
-                  A COZY HAVEN<br />FOR CHAI LOVERS
+                  EXPERIENCE THE<br />CHAH E PIAA DE VIBE
                 </h2>
                 <p className="body-text mx-auto">
                   Warm woods, comfortable seating, and an atmosphere that feels like home. Step into our world and let the aroma of freshly brewed chai embrace you.
@@ -187,11 +187,13 @@ export default function Home() {
 
             <AnimatedSection animation="scale-in" delay={300}>
               <div className="relative w-full h-[400px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-warm-lg">
-                <Image
-                  src="/images/interior.jpg"
-                  alt="Chah E Piaa De Interior"
-                  fill
-                  className="object-cover"
+                <video
+                  src="/featuredvideo.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
                 />
               </div>
             </AnimatedSection>
@@ -270,8 +272,8 @@ export default function Home() {
                         <h4 className="label-text mb-3">
                           Address
                         </h4>
-                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">123 Chai Street</p>
-                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">Your City, State 12345</p>
+                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">PO BOX 392 STN A</p>
+                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">Abbotsford BC V2T 6Z7</p>
                       </div>
                     </div>
                     <Button variant="primary" className="w-full">
@@ -330,17 +332,17 @@ export default function Home() {
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <AnimatedSection animation="slide-up" delay={200}>
-                <div className="card-surface p-8">
+              <AnimatedSection animation="slide-up" delay={200} className="h-full">
+                <div className="card-surface p-8 h-full flex flex-col">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-[#D4A574] text-xl">★</span>
                     ))}
                   </div>
-                  <p className="body-text mb-6 italic">
+                  <p className="body-text mb-6 italic flex-grow">
                     "The best chai I've had outside of India! The masala blend is perfect and the atmosphere is so welcoming."
                   </p>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 mt-auto">
                     <div className="w-12 h-12 rounded-full bg-gradient-warm flex items-center justify-center text-[#3E2723] font-bold">
                       PS
                     </div>
@@ -352,17 +354,17 @@ export default function Home() {
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-up" delay={400}>
-                <div className="card-surface p-8">
+              <AnimatedSection animation="slide-up" delay={400} className="h-full">
+                <div className="card-surface p-8 h-full flex flex-col">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-[#D4A574] text-xl">★</span>
                     ))}
                   </div>
-                  <p className="body-text mb-6 italic">
+                  <p className="body-text mb-6 italic flex-grow">
                     "A hidden gem! The Kesar Badam Chai is absolutely divine. This place has become my daily ritual."
                   </p>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 mt-auto">
                     <div className="w-12 h-12 rounded-full bg-gradient-warm flex items-center justify-center text-[#3E2723] font-bold">
                       RK
                     </div>
@@ -374,17 +376,17 @@ export default function Home() {
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-up" delay={600}>
-                <div className="card-surface p-8">
+              <AnimatedSection animation="slide-up" delay={600} className="h-full">
+                <div className="card-surface p-8 h-full flex flex-col">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-[#D4A574] text-xl">★</span>
                     ))}
                   </div>
-                  <p className="body-text mb-6 italic">
+                  <p className="body-text mb-6 italic flex-grow">
                     "Authentic flavors, cozy ambiance, and friendly staff. Chah E Piaa De feels like home away from home!"
                   </p>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 mt-auto">
                     <div className="w-12 h-12 rounded-full bg-gradient-warm flex items-center justify-center text-[#3E2723] font-bold">
                       AM
                     </div>
@@ -400,7 +402,7 @@ export default function Home() {
         </section>
 
         {/* Our Story Section - Split Layout */}
-        <section className="relative w-full min-h-[80vh] flex flex-col md:flex-row">
+        <section className="relative w-full flex flex-col md:flex-row">
           {/* Left Panel - Content */}
           <div className="w-full md:w-1/2 bg-gradient-dark text-white flex items-center justify-center p-12 md:p-16 lg:p-20">
             <div className="w-full">
@@ -450,11 +452,11 @@ export default function Home() {
           {/* Right Panel - Image */}
           <AnimatedSection
             animation="slide-in-right"
-            className="w-full md:w-1/2 relative h-[50vh] md:h-[80vh]"
+            className="w-full md:w-1/2 relative h-[50vh] md:h-auto"
           >
             <div className="image-overlay h-full">
               <Image
-                src="/images/chai-brewing.png"
+                src="/images/featureimage.jpeg"
                 alt="Our chai brewing process"
                 fill
                 className="object-cover object-center"
@@ -479,18 +481,18 @@ export default function Home() {
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <AnimatedSection animation="slide-in-left" delay={200}>
-                <div className="card-surface p-10 relative overflow-hidden">
+              <AnimatedSection animation="slide-in-left" delay={200} className="h-full">
+                <div className="card-surface p-10 relative overflow-hidden h-full flex flex-col">
                   <div className="absolute top-4 right-4 bg-[#8B5A3C] text-white px-4 py-2 rounded-full text-sm font-semibold">
                     NEW
                   </div>
                   <h3 className="heading-md mb-4">
                     Happy Hour Special
                   </h3>
-                  <p className="body-text mb-6">
+                  <p className="body-text mb-6 flex-grow">
                     Get 20% off on all chai varieties between 3 PM - 5 PM on weekdays. Perfect for your afternoon pick-me-up!
                   </p>
-                  <div className="flex items-baseline gap-2 mb-6">
+                  <div className="flex items-baseline gap-2 mb-6 mt-auto">
                     <span className="text-3xl font-bold text-[#8B5A3C]" style={{ fontFamily: 'Fredoka, cursive' }}>₹48</span>
                     <span className="text-lg text-[#3E2723]/50 line-through">₹60</span>
                   </div>
@@ -500,18 +502,18 @@ export default function Home() {
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-in-right" delay={400}>
-                <div className="card-surface p-10 relative overflow-hidden">
+              <AnimatedSection animation="slide-in-right" delay={400} className="h-full">
+                <div className="card-surface p-10 relative overflow-hidden h-full flex flex-col">
                   <div className="absolute top-4 right-4 bg-[#D4A574] text-white px-4 py-2 rounded-full text-sm font-semibold">
                     POPULAR
                   </div>
                   <h3 className="heading-md mb-4">
                     Loyalty Card
                   </h3>
-                  <p className="body-text mb-6">
+                  <p className="body-text mb-6 flex-grow">
                     Buy 9 chais and get your 10th absolutely free! Plus, earn points for exclusive rewards and early access to new flavors.
                   </p>
-                  <div className="flex items-baseline gap-2 mb-6">
+                  <div className="flex items-baseline gap-2 mb-6 mt-auto">
                     <span className="text-3xl font-bold text-[#8B5A3C]" style={{ fontFamily: 'Fredoka, cursive' }}>Free</span>
                     <span className="text-lg text-[#3E2723]/70">to join</span>
                   </div>
@@ -548,7 +550,7 @@ export default function Home() {
                 >
                   <div className="relative aspect-square rounded-xl overflow-hidden shadow-warm group cursor-pointer">
                     <Image
-                      src="/images/chai-brewing.png"
+                      src="/images/featureimage.jpeg"
                       alt={`Instagram post ${item}`}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-110"
@@ -581,7 +583,7 @@ export default function Home() {
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <Image
-                      src="/images/logo.png"
+                      src="/images/newlogo.png"
                       alt="Chah E Piaa De"
                       width={60}
                       height={60}

@@ -38,7 +38,7 @@ export default function Navigation() {
                     <Link href="/" className="flex items-center gap-3 group">
                         <div className="relative w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-110">
                             <Image
-                                src="/images/logo.png"
+                                src="/images/newlogo.png"
                                 alt="Chah E Piaa De"
                                 fill
                                 className="object-contain"

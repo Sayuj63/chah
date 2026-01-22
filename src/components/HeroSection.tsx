@@ -37,7 +37,7 @@ export default function HeroSection() {
         <div className={`mb-8 md:mb-12 flex justify-center transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
           <div className="relative w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 animate-float">
             <Image
-              src="/images/logo.png"
+              src="/images/newlogo.png"
               alt="Chah E Piaa De Logo"
               fill
               className="object-contain drop-shadow-2xl"
