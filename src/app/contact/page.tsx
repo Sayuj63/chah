@@ -41,7 +41,7 @@ export default function ContactPage() {
                             <h1 className="heading-xl mb-8">
                                 LET'S TALK<br />CHAI
                             </h1>
-                            <p className="body-text max-w-2xl mx-auto">
+                            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-[#3E2723]/90 font-medium px-4">
                                 Have a question, feedback, or just want to say hello? We'd love to hear from you!
                             </p>
                         </AnimatedSection>
@@ -53,10 +53,10 @@ export default function ContactPage() {
                     <div className="container-custom">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                             {/* Contact Form */}
-                            <AnimatedSection animation="slide-in-left">
-                                <div className="card p-8 md:p-10">
+                            <AnimatedSection animation="slide-in-left" className="h-full">
+                                <div className="card p-8 md:p-10 h-full flex flex-col">
                                     <h2 className="heading-md mb-8">Send Us a Message</h2>
-                                    <form onSubmit={handleSubmit} className="space-y-6">
+                                    <form onSubmit={handleSubmit} className="space-y-6 flex-grow flex flex-col">
                                         <div>
                                             <label htmlFor="name" className="label-text block mb-2">
                                                 Name
@@ -104,7 +104,7 @@ export default function ContactPage() {
                                             />
                                         </div>
 
-                                        <div>
+                                        <div className="flex-grow flex flex-col">
                                             <label htmlFor="message" className="label-text block mb-2">
                                                 Message
                                             </label>
@@ -114,8 +114,7 @@ export default function ContactPage() {
                                                 value={formData.message}
                                                 onChange={handleChange}
                                                 required
-                                                rows={5}
-                                                className="w-full px-4 py-3 rounded-lg border-2 border-[#D4A574] focus:border-[#8B5A3C] focus:outline-none transition-colors bg-white text-[#3E2723] resize-none"
+                                                className="w-full px-4 py-3 rounded-lg border-2 border-[#D4A574] focus:border-[#8B5A3C] focus:outline-none transition-colors bg-white text-[#3E2723] resize-none flex-grow"
                                                 placeholder="Tell us what's on your mind..."
                                             />
                                         </div>
@@ -128,9 +127,9 @@ export default function ContactPage() {
                             </AnimatedSection>
 
                             {/* Contact Info */}
-                            <AnimatedSection animation="slide-in-right">
-                                <div className="space-y-8">
-                                    <div>
+                            <AnimatedSection animation="slide-in-right" className="h-full">
+                                <div className="space-y-8 h-full flex flex-col">
+                                    <div className="flex-grow">
                                         <h2 className="heading-md mb-8">Visit Us</h2>
                                         <div className="space-y-6">
                                             {/* Location 1 */}
@@ -221,7 +220,7 @@ export default function ContactPage() {
                             <h2 className="heading-lg mb-6 text-white">
                                 READY FOR<br />YOUR CHAI?
                             </h2>
-                            <p className="body-text mb-10 text-white/80 max-w-2xl mx-auto">
+                            <p className="text-lg md:text-xl mb-10 text-white/90 font-medium px-4">
                                 Don't wait—visit us today and experience authentic Indian chai
                             </p>
                             <Button href="/#locations" variant="primary">
