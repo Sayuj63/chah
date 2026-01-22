@@ -40,7 +40,7 @@ export default function AboutPage() {
                             <h1 className="heading-xl mb-8">
                                 BREWING MEMORIES<br />SINCE 2024
                             </h1>
-                            <p className="body-text max-w-3xl mx-auto">
+                            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-[#3E2723]/90 font-medium px-4">
                                 Chah E Piaa De was born from a simple dream: to share the authentic taste of Indian chai with the world. What started as a small family recipe has grown into a beloved community gathering place.
                             </p>
                         </AnimatedSection>
@@ -90,7 +90,7 @@ export default function AboutPage() {
                         <AnimatedSection animation="slide-up">
                             <div className="text-center mb-16">
                                 <h2 className="heading-lg mb-6">OUR VALUES</h2>
-                                <p className="body-text max-w-2xl mx-auto">
+                                <p className="text-lg md:text-xl text-[#3E2723]/80 font-medium px-4">
                                     These principles guide everything we do
                                 </p>
                             </div>
@@ -102,11 +102,12 @@ export default function AboutPage() {
                                     key={value.title}
                                     animation="slide-up"
                                     delay={index * 150}
+                                    className="h-full"
                                 >
-                                    <div className="card text-center p-8">
+                                    <div className="card text-center p-8 h-full flex flex-col">
                                         <div className="text-5xl mb-4">{value.icon}</div>
                                         <h3 className="heading-sm mb-3">{value.title}</h3>
-                                        <p className="text-sm text-[#3E2723]/70 leading-relaxed">
+                                        <p className="text-sm text-[#3E2723]/70 leading-relaxed flex-grow">
                                             {value.description}
                                         </p>
                                     </div>
@@ -124,7 +125,7 @@ export default function AboutPage() {
                                 <h2 className="heading-lg mb-6">
                                     THE PERFECT<br />BREW
                                 </h2>
-                                <p className="body-text max-w-2xl mx-auto">
+                                <p className="text-lg md:text-xl text-[#3E2723]/80 font-medium px-4">
                                     Our traditional brewing process ensures every cup is perfect
                                 </p>
                             </div>
@@ -177,7 +178,7 @@ export default function AboutPage() {
                             <h2 className="heading-lg mb-6 text-white">
                                 EXPERIENCE THE<br />DIFFERENCE
                             </h2>
-                            <p className="body-text mb-10 text-white/80 max-w-2xl mx-auto">
+                            <p className="text-lg md:text-xl mb-10 text-white/90 font-medium px-4">
                                 Visit us today and taste the tradition in every cup
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

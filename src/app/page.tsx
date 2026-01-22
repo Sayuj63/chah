@@ -221,6 +221,7 @@ export default function Home() {
                   key={chai.name}
                   animation="slide-up"
                   delay={index * 200}
+                  className="h-full"
                 >
                   <MenuCard {...chai} />
                 </AnimatedSection>

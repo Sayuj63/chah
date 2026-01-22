@@ -178,25 +178,27 @@ export default function MenuPage() {
 
             <main className="min-h-screen bg-[#FFF8F0] pt-24">
                 {/* Hero Section */}
-                <section className="relative w-full py-32 bg-[#3E2723] overflow-hidden">
+                <section className="relative w-full py-24 md:py-32 bg-[#3E2723] overflow-hidden">
                     <div className="absolute inset-0 opacity-40">
                         <Image
                             src="/images/heroimage.jpeg"
                             alt="Background"
                             fill
                             className="object-cover"
+                            priority
                         />
                     </div>
-                    {/* Gradient Overlay for improved legibility */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#3E2723]/30 to-[#3E2723]/80" />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#3E2723]/60 via-[#3E2723]/40 to-[#3E2723]/90" />
 
-                    <div className="container-custom relative z-10 text-center">
-                        <AnimatedSection animation="slide-up">
-                            <p className="text-[#D4A574] text-sm uppercase tracking-[0.3em] font-bold mb-6">Our Full Menu</p>
-                            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-[#FFF8F0]" style={{ fontFamily: 'Fredoka, cursive' }}>
+                    <div className="container-custom relative z-10">
+                        <AnimatedSection animation="slide-up" className="flex flex-col items-center text-center w-full">
+                            <p className="text-[#D4A574] text-xs md:text-sm uppercase tracking-[0.4em] font-black mb-8">Our Full Menu</p>
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-10 text-[#FFF8F0] leading-[1.1]" style={{ fontFamily: 'Fredoka, cursive' }}>
                                 CRAFTED WITH<br />LOVE & SPICES
                             </h1>
-                            <p className="body-text max-w-2xl mx-auto text-[#FFF8F0]/90 font-medium text-lg leading-relaxed">
+                            <div className="w-24 h-1.5 bg-[#D4A574] mb-10 rounded-full" />
+                            <p className="text-[#FFF8F0]/90 font-medium text-lg md:text-xl lg:text-2xl leading-relaxed px-4">
                                 From our signature chais to expertly brewed coffees and soul-warming snacks,
                                 every item on our menu is a celebration of authentic Indian flavors and modern cafe culture.
                             </p>
@@ -211,22 +213,22 @@ export default function MenuPage() {
                         className={`section-padding ${catIndex % 2 === 0 ? 'bg-[#FFF8F0]' : 'bg-[#F5E6D3]'}`}
                     >
                         <div className="container-custom">
-                            <AnimatedSection animation="slide-up">
-                                <div className="mb-16 text-center lg:text-left">
-                                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3E2723]" style={{ fontFamily: 'Fredoka, cursive' }}>
+                            <AnimatedSection animation="slide-up" className="mb-20">
+                                <div className="text-center md:text-left">
+                                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-[#3E2723]" style={{ fontFamily: 'Fredoka, cursive' }}>
                                         {category.title}
                                     </h2>
-                                    <div className="w-20 h-1 bg-[#8B5A3C] mb-6 mx-auto lg:mx-0" />
-                                    <p className="text-lg text-[#8B5A3C] font-medium max-w-2xl">{category.subtitle}</p>
+                                    <div className="w-20 h-1 bg-[#8B5A3C] mb-8 mx-auto md:mx-0" />
+                                    <p className="text-xl text-[#8B5A3C] font-semibold tracking-tight">{category.subtitle}</p>
                                 </div>
                             </AnimatedSection>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
                                 {category.items.map((item, index) => (
                                     <AnimatedSection
                                         key={item.name}
                                         animation="slide-up"
-                                        delay={(index % 3) * 150}
+                                        delay={(index % 3) * 100}
                                         className="h-full"
                                     >
                                         <MenuCard {...item} />
@@ -241,21 +243,22 @@ export default function MenuPage() {
                 <section className="section-padding bg-gradient-dark text-white relative overflow-hidden">
                     {/* Decorative background circle */}
                     <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#D4A574]/10 rounded-full blur-3xl" />
+                    <div className="absolute -top-20 -left-20 w-80 h-80 bg-[#8B5A3C]/10 rounded-full blur-3xl" />
 
                     <div className="container-custom relative z-10 text-center">
                         <AnimatedSection animation="slide-up">
-                            <h2 className="text-4xl md:text-6xl font-bold mb-8 text-[#D4A574]" style={{ fontFamily: 'Fredoka, cursive' }}>
+                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 text-[#D4A574]" style={{ fontFamily: 'Fredoka, cursive' }}>
                                 HUNGRY FOR MORE?
                             </h2>
-                            <p className="text-xl mb-12 text-[#FFF8F0]/80 max-w-2xl mx-auto leading-relaxed">
+                            <p className="text-xl md:text-2xl mb-12 text-[#FFF8F0]/80 max-w-2xl mx-auto leading-relaxed font-medium">
                                 Experience the true essence of Indian hospitality. Whether it's a quick break or a long conversation,
                                 we have the perfect blend for every occasion.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                                <Button href="/#locations" variant="primary" className="px-10 py-4 text-lg">
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                <Button href="/#locations" variant="primary" className="px-12 py-5 text-lg min-w-[220px]">
                                     Find Our Locations
                                 </Button>
-                                <Button href="/contact" variant="secondary" className="px-10 py-4 text-lg text-white border-white hover:bg-white hover:text-[#3E2723]">
+                                <Button href="/contact" variant="secondary" className="px-12 py-5 text-lg min-w-[220px] text-white border-white hover:bg-white hover:text-[#3E2723]">
                                     Contact Us
                                 </Button>
                             </div>
