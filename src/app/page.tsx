@@ -188,7 +188,7 @@ export default function Home() {
             <AnimatedSection animation="scale-in" delay={300}>
               <div className="relative w-full h-[400px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-warm-lg">
                 <video
-                  src="/featuredvideo.mp4"
+                  src="/featuredvid.mp4"
                   autoPlay
                   loop
                   muted
