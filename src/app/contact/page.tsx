@@ -132,21 +132,21 @@ export default function ContactPage() {
                                     <div className="flex-grow">
                                         <h2 className="heading-md mb-8">Visit Us</h2>
                                         <div className="space-y-6">
-                                            {/* Location 1 */}
+                                            {/* Location */}
                                             <div className="card-surface p-6">
-                                                <h3 className="heading-sm mb-4">Main Location</h3>
+                                                <h3 className="heading-sm mb-4">Our Location</h3>
                                                 <div className="space-y-3 text-sm text-[#3E2723]/80">
                                                     <p className="flex items-start gap-3">
                                                         <span className="text-xl">📍</span>
-                                                        <span>123 Chai Street<br />Your City, State 12345</span>
+                                                        <span>PO BOX 392 STN A<br />Abbotsford BC V2T 6Z7</span>
                                                     </p>
                                                     <p className="flex items-center gap-3">
                                                         <span className="text-xl">📞</span>
-                                                        <span>+91 98765 43210</span>
+                                                        <span>+1 (604) 123-4567</span>
                                                     </p>
                                                     <p className="flex items-center gap-3">
                                                         <span className="text-xl">📧</span>
-                                                        <span>main@chahepiaade.com</span>
+                                                        <span>info@chahepiaade.com</span>
                                                     </p>
                                                     <p className="flex items-start gap-3">
                                                         <span className="text-xl">🕐</span>
@@ -155,26 +155,19 @@ export default function ContactPage() {
                                                 </div>
                                             </div>
 
-                                            {/* Location 2 */}
+                                            {/* Google Maps */}
                                             <div className="card-surface p-6">
-                                                <h3 className="heading-sm mb-4">Second Location</h3>
-                                                <div className="space-y-3 text-sm text-[#3E2723]/80">
-                                                    <p className="flex items-start gap-3">
-                                                        <span className="text-xl">📍</span>
-                                                        <span>456 Tea Avenue<br />Your City, State 12345</span>
-                                                    </p>
-                                                    <p className="flex items-center gap-3">
-                                                        <span className="text-xl">📞</span>
-                                                        <span>+91 98765 43211</span>
-                                                    </p>
-                                                    <p className="flex items-center gap-3">
-                                                        <span className="text-xl">📧</span>
-                                                        <span>second@chahepiaade.com</span>
-                                                    </p>
-                                                    <p className="flex items-start gap-3">
-                                                        <span className="text-xl">🕐</span>
-                                                        <span>Mon-Fri: 7am - 10pm<br />Sat-Sun: 8am - 11pm</span>
-                                                    </p>
+                                                <h3 className="heading-sm mb-4">Find Us</h3>
+                                                <div className="w-full h-64 rounded-lg overflow-hidden">
+                                                    <iframe
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83327.14429632896!2d-122.35825!3d49.05798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9e6b0f0b0b1%3A0x1e6a0b0b0b0b0b0b!2sAbbotsford%2C%20BC!5e0!3m2!1sen!2sca!4v1234567890123!5m2!1sen!2sca"
+                                                        width="100%"
+                                                        height="100%"
+                                                        style={{ border: 0 }}
+                                                        allowFullScreen
+                                                        loading="lazy"
+                                                        referrerPolicy="no-referrer-when-downgrade"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>

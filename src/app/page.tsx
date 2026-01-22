@@ -254,14 +254,14 @@ export default function Home() {
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-              {/* Location 1 */}
-              <AnimatedSection animation="slide-in-left" delay={200}>
-                <div className="card-surface">
-                  <div className="p-8 md:p-10">
+              {/* Location Card */}
+              <AnimatedSection animation="slide-in-left" delay={200} className="h-full">
+                <div className="card-surface h-full">
+                  <div className="p-8 md:p-10 h-full flex flex-col">
                     <h3 className="heading-md mb-8">
-                      Main Location
+                      Our Location
                     </h3>
-                    <div className="space-y-6 mb-8">
+                    <div className="space-y-6 mb-8 flex-grow">
                       <div>
                         <h4 className="label-text mb-3">
                           Hours
@@ -276,6 +276,13 @@ export default function Home() {
                         <p className="text-sm text-[#3E2723]/80 leading-relaxed">PO BOX 392 STN A</p>
                         <p className="text-sm text-[#3E2723]/80 leading-relaxed">Abbotsford BC V2T 6Z7</p>
                       </div>
+                      <div>
+                        <h4 className="label-text mb-3">
+                          Contact
+                        </h4>
+                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">+1 (604) 123-4567</p>
+                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">info@chahepiaade.com</p>
+                      </div>
                     </div>
                     <Button variant="primary" className="w-full">
                       Get Directions
@@ -284,32 +291,24 @@ export default function Home() {
                 </div>
               </AnimatedSection>
 
-              {/* Location 2 */}
+              {/* Google Maps */}
               <AnimatedSection animation="slide-in-right" delay={400}>
-                <div className="card-surface">
-                  <div className="p-8 md:p-10">
+                <div className="card-surface h-full">
+                  <div className="p-8 md:p-10 h-full flex flex-col">
                     <h3 className="heading-md mb-8">
-                      Second Location
+                      Find Us on the Map
                     </h3>
-                    <div className="space-y-6 mb-8">
-                      <div>
-                        <h4 className="label-text mb-3">
-                          Hours
-                        </h4>
-                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">Mon to Fri: 7am - 10pm</p>
-                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">Sat & Sun: 8am - 11pm</p>
-                      </div>
-                      <div>
-                        <h4 className="label-text mb-3">
-                          Address
-                        </h4>
-                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">456 Tea Avenue</p>
-                        <p className="text-sm text-[#3E2723]/80 leading-relaxed">Your City, State 12345</p>
-                      </div>
+                    <div className="flex-grow rounded-lg overflow-hidden" style={{ minHeight: '400px' }}>
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83327.14429632896!2d-122.35825!3d49.05798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9e6b0f0b0b1%3A0x1e6a0b0b0b0b0b0b!2sAbbotsford%2C%20BC!5e0!3m2!1sen!2sca!4v1234567890123!5m2!1sen!2sca"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
                     </div>
-                    <Button variant="primary" className="w-full">
-                      Get Directions
-                    </Button>
                   </div>
                 </div>
               </AnimatedSection>
